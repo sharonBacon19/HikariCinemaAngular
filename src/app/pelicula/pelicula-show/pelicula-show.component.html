@@ -1,0 +1,42 @@
+<div class="col" *ngIf="datos?.id">
+  <body id="acerca-de" class="fondo" style="background-image: url({{datos.gif}});">
+  <div class="container" >
+      <br><br><br><br><br>
+        <div class="row">
+          <div class="col-4">
+              <div>
+                <img src="{{datos.imagen}}"  alt="" width="200" height="300"/>
+              </div>
+            </div>
+          <div class="col-8" >
+                <h2>
+                  {{datos.nombre}}
+                </h2>
+                	<h4>
+                  	<hr>
+                			{{datos.sinopsis}}
+                    <hr>
+                  </h4>
+                  <h4>
+                    Clasificación:
+                			{{datos.clasificacion.clasificacion}}
+                    <hr>
+                  </h4>
+                  <h4>
+                		<div class="card-text mb-auto" *ngIf="datos?.genero">
+                      Genero:
+                      <ul>
+                      <li *ngFor="let p of datos.genero">
+                        {{p.tipogenero}}
+                      </li>
+                      </ul>
+                      </div>
+                    <hr/>
+                  </h4>
+            </div>
+        </div>
+    </div>
+<br><br><br><br><br>
+</body>
+<br><br><br><br><br><br>
+</div>

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row my-2">
+  <div class="col-md-4 my-3" *ngFor="let funcion of datos">
+  <!-- Información de videojuegos -->
+  <div class="card border-info mb-3">
+  <div class="card-body">
+  <h4 class="card-title">{{funcion.pelicula.nombre}} </h4>
+  <p class="card-text">
+    <img style = "height: 350px; width: 100%; display: block;" src="{{funcion.pelicula.imagen}}" width="400" height="250">
+  </p>
+  <div class = "card-body">
+    <h5 class = "card-title">
+      <font style = "vertical-align: heredar;">
+        <font style = "vertical-align: heredar;">
+          <p>
+            Fecha: {{funcion.fechafuncion}}
+            <br/><br/>
+            Hora: {{funcion.horafuncion}}
+          </p>
+        </font>
+      </font>
+    </h5>
+    <h6 class = "card-title">
+      <font style = "vertical-align: heredar;">
+        <font style = "vertical-align: heredar;">
+          <p>
+            Sucursal: {{funcion.sucursal.nombre}}
+          </p>
+        </font>
+      </font>
+    </h6>
+  </div>
+  </div>
+  </div>
+  </div>
+<!--caja se va a repetir-->
+  </div>
+  </div>
+<br/><br/><br/><br/><br/>

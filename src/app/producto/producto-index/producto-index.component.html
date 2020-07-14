@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row my-2">
+
+    <div class="col-md-4 my-3" *ngFor="let producto of datos">
+    <!-- Información de videojuegos -->
+  <div class = "tarjeta mb-3">
+    <h3 class = "card-header">
+        <font style = "vertical-align: heredar;">
+          <font style = "vertical-align: heredar;">
+            {{producto.nombre}}
+          </font>
+        </font>
+    </h3>
+      <img style = "height: 450px; width: 100%; display: block;" src = "{{producto.imagen}}" alt =" Imagen de la tarjeta ">
+      <div class = "card-body">
+        <p class = "card-text">
+          <font style = "vertical-align: heredar;">
+            <font style = "vertical-align: heredar;">
+              <a class="button special"
+              [routerLink]="['/producto/', producto.id]"
+              routerLinkActive="active">
+              Ver más <i class="fas fa-angle-double-right"></i>
+              </a>
+              </font>
+            </font>
+        </p>
+      </div>
+    </div>
+  <!--caja se va a repetir-->
+    </div>
+    </div>
+    <br/><br/><br/>

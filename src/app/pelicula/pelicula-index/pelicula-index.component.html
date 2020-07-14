@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row my-2">
+
+  <div class="col-md-4 my-3" *ngFor="let pelicula of datos">
+  <!-- Información de videojuegos -->
+  <div class="card border-info mb-3">
+  <div class="card-body">
+  <h4 class="card-title">{{pelicula.nombre}} </h4>
+  <p class="card-text">
+    <img style = "height: 450px; width: 100%; display: block;" src = "{{pelicula.imagen}}" alt =" Imagen de la tarjeta ">
+  </p>
+  <a class="button special"
+  [routerLink]="['/pelicula/', pelicula.id]"
+  routerLinkActive="active">
+  Ver más <i class="fas fa-angle-double-right"></i>
+  </a>
+  </div>
+  </div>
+  </div>
+<!--caja se va a repetir-->
+  </div>
+  </div>
+  <br/><br/><br/><br/>

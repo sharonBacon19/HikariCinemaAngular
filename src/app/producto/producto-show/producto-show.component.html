@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row my-4">
+  <div class="col" *ngIf="datos?.id">
+
+    <div class = "tarjeta mb-3">
+      <h3 class = "card-header">
+        <font style = "vertical-align: heredar;">
+          <font style = "vertical-align: heredar;">
+            {{datos.nombre}}
+          </font>
+        </font>
+        </h3>
+      <img style = "height: 500px; width: 80%; display: block;" src = "{{datos.imagen}}"alt =" Imagen de la tarjeta ">
+      <div class = "card-body">
+        <p class = "card-text">
+        <font style = "vertical-align: heredar;">
+          <font style = "vertical-align: heredar;">
+            {{datos.descripcion}}
+          </font>
+        </font> </p>
+      </div>
+      <ul class = "list-group list-group-flush">
+        <li class = "list-group-item">
+          <font style = "vertical-align: heredar;">
+            <font style = "vertical-align: heredar;">
+              <b>Clasificacion: {{datos.tipoproducto.tipo}}</b>
+            </font>
+          </font>
+          </li>
+        <li class = "list-group-item">
+          <font style = "vertical-align: heredar;">
+            <font style = "vertical-align: heredar;">
+              <div class="card-text mb-auto" *ngIf="datos?.clasificacion">
+                <b>Clasificacion: </b>
+                <ul>
+                <li *ngFor="let p of datos.clasificacion">
+                  {{p.clasificacion}}
+                </li>
+                </ul>
+                </div>
+            </font>
+          </font>
+        </li>
+      </ul>
+    </div>
+</div>
+</div>
+</div>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
